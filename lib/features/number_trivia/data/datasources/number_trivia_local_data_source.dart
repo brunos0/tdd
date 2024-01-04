@@ -23,7 +23,10 @@ class NumberTriviaLocalDataSourceImpl implements NumberTriviaLocalDataSource {
   @override
   Future<void> cacheNumberTrivia(NumberTriviaModel triviaToCache) {
     //throw UnimplementedError();
-    return Future.value(null);
+
+    return sharedPreferences.setString(
+        sharedPrefKey, json.encode(triviaToCache.toJson()));
+    //return Future.value(null);
   }
 
   @override
