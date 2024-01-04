@@ -6,7 +6,7 @@
 import 'dart:async' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:resocoder/core/platform/network_info.dart' as _i7;
+import 'package:resocoder/core/network/network_info.dart' as _i7;
 import 'package:resocoder/features/number_trivia/data/datasources/number_trivia_local_data_source.dart'
     as _i6;
 import 'package:resocoder/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart'
