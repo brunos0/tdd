@@ -6,7 +6,7 @@ import 'package:resocoder/features/number_trivia/domain/entities/number_trivia.d
 import 'package:resocoder/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 
 class GetRandomNumbertrivia implements UseCase<NumberTrivia, NoParams> {
-  GetRandomNumbertrivia(this.repository);
+  const GetRandomNumbertrivia(this.repository);
   final NumberTriviaRepository repository;
 
   @override
