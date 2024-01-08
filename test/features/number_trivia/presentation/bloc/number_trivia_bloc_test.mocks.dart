@@ -100,11 +100,11 @@ class MockGetConcreteNumberTrivia extends _i1.Mock
       ) as _i5.Future<_i3.Either<_i6.Failure, _i7.NumberTrivia>>);
 }
 
-/// A class which mocks [GetRandomNumbertrivia].
+/// A class which mocks [GetRandomNumberTrivia].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockGetRandomNumbertrivia extends _i1.Mock
-    implements _i8.GetRandomNumbertrivia {
+class MockGetRandomNumberTrivia extends _i1.Mock
+    implements _i8.GetRandomNumberTrivia {
   @override
   _i2.NumberTriviaRepository get repository => (super.noSuchMethod(
         Invocation.getter(#repository),

@@ -16,13 +16,13 @@ import 'get_concrete_number_trivia_test.mocks.dart';
 //class MockNumberTriviaRepository extends Mock    implements NumberTriviaRepository {}
 
 void main() {
-  late GetRandomNumbertrivia usecase;
+  late GetRandomNumberTrivia usecase;
   late MockNumberTriviaRepository mockNumberTriviaRepository;
 
   //execute for every test individually
   setUp(() {
     mockNumberTriviaRepository = MockNumberTriviaRepository();
-    usecase = GetRandomNumbertrivia(mockNumberTriviaRepository);
+    usecase = GetRandomNumberTrivia(mockNumberTriviaRepository);
   });
 
   const tNumber = 1;

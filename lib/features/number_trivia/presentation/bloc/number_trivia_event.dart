@@ -14,7 +14,7 @@ class GetTriviaForConcreteNumber extends NumberTriviaEvent {
 }
 
 class GetTriviaForRandomNumber extends NumberTriviaEvent {
-  const GetTriviaForRandomNumber(super.props);
+  GetTriviaForRandomNumber() : super([]);
 
   @override
   List<Object?> get props => [];
