@@ -49,7 +49,7 @@ void main() {
           dataSource.getConcreteNumberTrivia(tNumber);
           // assert
           verify(mockHttpClient.get(Uri.parse('http://numbersapi.com/$tNumber'),
-              headers: {'Content-Type:': 'application/json'}));
+              headers: {'Content-Type': 'application/json'}));
         },
       );
 
@@ -96,7 +96,7 @@ void main() {
           dataSource.getRandomNumberTrivia();
           // assert
           verify(mockHttpClient.get(Uri.parse('http://numbersapi.com/random'),
-              headers: {'Content-Type:': 'application/json'}));
+              headers: {'Content-Type': 'application/json'}));
         },
       );
 
