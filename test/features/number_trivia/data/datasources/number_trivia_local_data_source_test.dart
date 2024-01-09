@@ -49,7 +49,6 @@ void main() {
   });
 
   group('cacheNumberTrivia', () {
-    const tNumberTriviaModel = NumberTriviaModel(text: 'test text', number: 1);
     test('should call SharedPreferences to cache the data', () async {
       final tNumberTriviaModel = NumberTriviaModel.fromJson(
           json.decode(fixture('trivia_cached.json')));

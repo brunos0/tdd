@@ -17,7 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 
 part 1-5
 part 6,7,8
-part 9,10,11
-
-
-part 12,13,14 
+part 9,10,11,12
+part 13,14 

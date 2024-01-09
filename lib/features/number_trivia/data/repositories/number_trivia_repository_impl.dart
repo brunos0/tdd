@@ -8,7 +8,7 @@ import 'package:resocoder/features/number_trivia/data/models/number_trivia_model
 import 'package:resocoder/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:resocoder/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 
-typedef Future<NumberTrivia> _ConcreteOrRandomChooser();
+typedef _ConcreteOrRandomChooser = Future<NumberTrivia> Function();
 
 class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   const NumberTriviaRepositoryImpl(

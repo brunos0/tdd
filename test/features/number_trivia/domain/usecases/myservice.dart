@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:resocoder/core/error/failures.dart';
 
 class MyService {
   Future<Either<Failure, Success>> fetchData() async {

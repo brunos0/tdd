@@ -9,7 +9,6 @@ import 'package:resocoder/features/number_trivia/data/datasources/number_trivia_
 import 'package:resocoder/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:resocoder/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:resocoder/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
-import 'package:resocoder/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 
 @GenerateNiceMocks([
   MockSpec<NumberTriviaRemoteDataSource>(),
@@ -19,14 +18,12 @@ import 'package:resocoder/features/number_trivia/domain/repositories/number_triv
 import 'number_trivia_repository_impl_test.mocks.dart';
 
 void main() {
-  late NumberTriviaRepository numberTriviaRepository;
   late NumberTriviaRemoteDataSource mockRemoteDataSource;
   late NumberTriviaLocalDataSource mockLocalDataSource;
   late NetworkInfo mockNetworkInfo;
   late NumberTriviaRepositoryImpl repository;
 
   setUp(() {
-    //numberTriviaRepository = MockNumberTriviaRepository();
     mockRemoteDataSource = MockNumberTriviaRemoteDataSource();
     mockLocalDataSource = MockNumberTriviaLocalDataSource();
     mockNetworkInfo = MockNetworkInfo();
