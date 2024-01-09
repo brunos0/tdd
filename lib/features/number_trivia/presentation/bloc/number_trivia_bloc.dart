@@ -25,7 +25,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
       if (event is GetTriviaForConcreteNumber) {
         final inputEither =
             inputConverter.stringToUnsignedInteger(event.numberString);
-        inputEither.fold((failure) {
+        await inputEither.fold((failure) {
           emit(Error(message: invalidInputFailureMessage));
         }, (integer) async {
           emit(Loading());
@@ -36,6 +36,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
       } else if (event is GetTriviaForRandomNumber) {
         emit(Loading());
         final failureOrTrivia = await getRandomNumberTrivia(NoParams());
+
         _eitherLoadedOrErrorState(failureOrTrivia, emit);
       }
     });

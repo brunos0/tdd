@@ -20,7 +20,7 @@ class NumberTriviaPage extends StatelessWidget {
         //brightness: Brightness.light,
         title: const Text('Number Trivia'),
       ),
-      body: buildBody(context),
+      body: SingleChildScrollView(child: buildBody(context)),
     );
   }
 
@@ -59,76 +59,11 @@ class NumberTriviaPage extends StatelessWidget {
                 height: 20,
               ),
               // Bottom half
-              TriviaControls()
+              const TriviaControls()
             ],
           ),
         ),
       ),
     );
-  }
-}
-
-class TriviaControls extends StatefulWidget {
-  const TriviaControls({
-    super.key,
-  });
-
-  @override
-  State<TriviaControls> createState() => _TriviaControlsState();
-}
-
-class _TriviaControlsState extends State<TriviaControls> {
-  String inputStr = '';
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        TextField(
-          keyboardType: TextInputType.number,
-          decoration: const InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                  borderSide: BorderSide(width: 2, color: Colors.black)),
-              hintText: 'Input a number'),
-          onChanged: (value) {
-            inputStr = value;
-          },
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: TextButton(
-                onPressed: dispatchConcrete,
-                child: const Text('Search'),
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Expanded(
-              child: TextButton(
-                style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  backgroundColor: MaterialStateProperty.all(Colors.grey),
-                ),
-                onPressed: () {},
-                child: const Text('Get Random Trivia'),
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-          ],
-        )
-      ],
-    );
-  }
-
-  void dispatchConcrete() {
-    BlocProvider.of<NumberTriviaBloc>(context)
-        .add(GetTriviaForConcreteNumber(inputStr));
   }
 }
