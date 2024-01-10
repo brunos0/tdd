@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:resocoder/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
-//import 'package:resocoder/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:resocoder/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
-import 'package:resocoder/features/number_trivia/presentation/bloc/number_trivia_event.dart';
 import 'package:resocoder/features/number_trivia/presentation/bloc/number_trivia_state.dart';
 import 'package:resocoder/injection_container.dart';
 
